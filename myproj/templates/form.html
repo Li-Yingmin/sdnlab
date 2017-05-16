@@ -1,0 +1,20 @@
+<html>
+<head>
+  <title>请输入控制页面信息</title>
+</head>
+<body>
+  {% if message %}
+  <p style="color:red">{{ message }}</p>
+  {% endif %}
+  <form action="/signin" method="post">
+    <legend>输入控制页信息:</legend>
+    <p><input name="tcporudp" placeholder="TCPorUDP" value="{{ tcporudp }}"></p>
+    <p><input name="port" placeholder="PORT" type="port"></p>
+    <p><input name="ipadress" placeholder="IPADRESS" value="{{ ipadress }}"></p>
+    <p><input type="radio" name="ostype" value="1" /> 禁用
+    <input type="radio" name="ostype" value="2" /> 解除
+    </p>
+    <p><button type="submit">提交</button></p>
+  </form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<head>
+  <title>Home</title>
+</head>
+<body>
+  <h1 style="font-style:italic">控制页面</h1>
+  {% if message %}
+  <p style="color:red">{{ message }}</p>
+  {% endif %}
+  <form action="/" method="post">
+    <p><button type="submit">禁用或解除</button></p>
+  </form>
+</body>
+</html>
